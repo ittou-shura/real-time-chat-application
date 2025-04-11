@@ -24,7 +24,7 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieparser());
 app.use("/api/auth", authRoutes);
-app.use("/api/message", messageRoutes);
+app.use("/api/messages", messageRoutes);
 
 app.listen(3000, ()=>{
     console.log(`Server is running on PORT: ${PORT}`);
