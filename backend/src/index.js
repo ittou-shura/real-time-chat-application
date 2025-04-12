@@ -13,9 +13,11 @@ import {connectDB} from "./lib/db.js";
 import cookieparser from "cookie-parser";
 import cors from "cors";
 
+import {app, server} from "./lib/socket.js";
+
 connectDB();
 
-const app = express();
+
 
 app.use(cors({
     origin: "http://localhost:5173", 
@@ -26,6 +28,6 @@ app.use(cookieparser());
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-app.listen(3000, ()=>{
+server.listen(3000, ()=>{
     console.log(`Server is running on PORT: ${PORT}`);
 })
