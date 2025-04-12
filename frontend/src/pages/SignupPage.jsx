@@ -4,7 +4,6 @@ import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-re
 import { Link } from "react-router-dom";
 
 import AuthImagePattern from "../components/AuthImagePattern";
-
 import toast from "react-hot-toast";
 
 const SignUpPage = () => {
@@ -31,7 +30,7 @@ const SignUpPage = () => {
     e.preventDefault();
 
     const success = validateForm();
-    
+
     if (success === true) signup(formData);
   };
 
